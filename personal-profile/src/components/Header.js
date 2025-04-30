@@ -1,18 +1,46 @@
 import { Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Header() {
-  return (
-    <header>
-      <nav>
-        <ul style={{ display: 'flex', gap: '10px', listStyle: 'none' }}>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About Me</Link></li>
-          <li><Link to="/education">Education</Link></li>
-          <li><Link to="/projects">Projects</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-        </ul>
-      </nav>
-    </header>
-  );
+    return (
+        <header>
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <div className="container-fluid">
+                    <Link className="navbar-brand" to="/">My Profile</Link>
+                    <button
+                        className="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <ul className="navbar-nav">
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/">Home</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/about">About Me</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/education">Education</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/projects">Projects</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/contact">Contact</Link>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    );
 }
+
 export default Header;

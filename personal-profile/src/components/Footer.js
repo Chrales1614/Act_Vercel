@@ -1,10 +1,11 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function Footer() {
     return (
-      <footer style={{ marginTop: '20px', textAlign: 'center' }}>
-        <hr />
-        <p>© 2025 Your Name. All rights reserved.</p>
-      </footer>
+        <footer className="bg-light text-center py-3 mt-4">
+            <hr />
+            <p className="mb-0">© 2025 Your Name. All rights reserved.</p>
+        </footer>
     );
-  }
-  export default Footer;
-  
+}
+export default Footer;

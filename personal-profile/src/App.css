@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+
+/* App.css */
+body {
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  background-color: #f8f9fa;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hover-shadow {
+  transition: all 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.hover-shadow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.transition {
+  transition: all 0.3s ease;
+}
+
+/* Timeline styling for Education page */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  width: 4px;
+  background: #dee2e6;
+  height: 100%;
+}
+
+.timeline-item {
+  margin-bottom: 2rem;
+}
+
+/* Button hover effects */
+.btn {
+  transition: all 0.3s;
+}
+
+.btn-primary {
+  box-shadow: 0 4px 6px rgba(13, 110, 253, 0.15);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(13, 110, 253, 0.25);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-dark:hover {
+  transform: translateY(-2px);
+}
+
+/* Card styles */
+.card {
+  transition: all 0.3s ease;
+  border-radius: 0.75rem;
+}
+
+.card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Progress bar animation */
+.progress-bar {
+  transition: width 1.5s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0d6efd;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0b5ed7;
+}
+
+/* Social icons hover effect */
+footer a {
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  transform: translateY(-3px);
+  opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  h1.display-4 {
+    font-size: 2.5rem;
+  }
+  
+  .timeline::before {
+    left: 15px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Form focus effects */
+.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
